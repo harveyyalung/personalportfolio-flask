@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    <style>
+        html {
+            scrollbar-width: normal;
+            scrollbar-color: lightblue grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Harvey Yalung</div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="{{ url_for('auth.home') }}">Home</a></li>
+                <li><a href="{{ url_for('auth.portfolio') }}">My Portfolio</a></li>
+                <li><a href="{{ url_for('auth.aboutme') }}">About Me</a></li>
+                <li><a href="{{ url_for('auth.blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('auth.contact') }}">Contact Me</a></li>
+                <li><a href="{{ url_for('auth.login') }}" class="login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>Harvey Yalung</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 portfolio. designed by <span>harvey yalung</span></p>
+        </div>
+    </footer>
+</body>
+</html>
